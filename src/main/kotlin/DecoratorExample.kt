@@ -81,6 +81,4 @@ object DecoratorExample {
 
         private fun costBySize() =  1.15
     }
-
-
 }
