@@ -54,7 +54,6 @@ object FactoryMethodExample {
 
     }
 
-
     open class Pizza(val name: String, val dough: String, val sauce: String, val toppings: List<String>) : IPizzaCook {
         override fun prepare() {
             println("!!!PREPARING $name")
