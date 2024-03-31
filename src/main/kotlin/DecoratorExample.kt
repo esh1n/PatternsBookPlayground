@@ -5,12 +5,10 @@ object DecoratorExample {
         println("${beverage.getDescription()} $ ${beverage.cost()}")
 
         var beverage2:Beverage = DarkRoast(Size.TALL)
-        beverage2 = Mocha(beverage2)
-        beverage2 = Mocha(beverage2)
         beverage2 = Whip(beverage2)
         println("${beverage2.getDescription()} $ ${beverage2.cost()}")
 
-        val beverage3:Beverage = Whip(Mocha(Soy(HouseBlend(Size.SHORT))))
+        val beverage3:Beverage = Whip(Mocha(Soy(beverage)))
         println("${beverage3.getDescription()} $ ${beverage3.cost()}")
     }
 

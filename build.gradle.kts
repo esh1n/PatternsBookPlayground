@@ -15,6 +15,7 @@ repositories {
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.6.20")
     implementation("org.jetbrains.kotlin:kotlin-script-runtime:1.6.20")
+    implementation(kotlin("stdlib-jdk8"))
 }
 
 tasks.test {
