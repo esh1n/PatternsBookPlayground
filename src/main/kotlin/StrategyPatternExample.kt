@@ -14,9 +14,10 @@ object StrategyPatternExample {
             flyBehaviour = FlyRocketPowered()
             display()
             performFly()
+            flyBehaviour = NoFly()
+            performFly()
             swim()
         }
-
     }
 
     class MallardDuck : Duck(flyBehaviour = FlyWithWings(), quackBehaviour = Squeak()) {
@@ -24,7 +25,6 @@ object StrategyPatternExample {
         override fun display() {
             println("I am real mallard duck")
         }
-
     }
 
 
@@ -51,18 +51,10 @@ object StrategyPatternExample {
         }
     }
 
-    class Quack : QuackBehavior {
-        override fun quack() {
-            println("quack")
-        }
-
-    }
-
     class MuteQuack : QuackBehavior {
         override fun quack() {
             println("--Silence--")
         }
-
     }
 
     class Squeak : QuackBehavior {
